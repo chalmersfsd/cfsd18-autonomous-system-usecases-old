@@ -71,7 +71,7 @@ services:
         command: "opendlv-device-camera-opencv --name=camera0 --bgr2rgb --cid=${CID} --camera=/dev/video0 --width=1344 --height=376 --bpp=24 --freq=30"
 
     cfsd18-perception-imagerecorder:
-        image: "imagerecorder:latest"
+        image: "chalmersfsd/cfsd18-perception-imagerecorder:pre-release-939279c"
         depends_on:
            - proxy-camera
         network_mode: "host"
