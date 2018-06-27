@@ -119,6 +119,11 @@ services:
         --startAccVal=2 --accFreq=1 --axSpeedProfile=5 --useAyReading=0 --velocityLimit=5 --mu=${MU} --axLimitPositive=5 --axLimitNegative=-5 --headingErrorDependency=0.5f --curveDetectionAngle=1.0f --curveDetectionPoints=20 \
         --usePolyFit=0 --curvEstStepsize=5 --polynomialDegree=3 --pointsPerPolySegment=10 --segmentizePolyfit=0 \
         --wheelAngleLimit=25 --wheelBase=${WB} --frontToCog=${FTC}"
+        
+    cfsd18-sim-visualization:
+        image: chalmersfsd/cfsd18-sim-visualization:pre-release-778bfb6
+        network_mode: "host"
+        command: "--cid=${CID}"
  
     steering:
         image: chalmersfsd/logic-action-steering:pre-release-b0d1def
