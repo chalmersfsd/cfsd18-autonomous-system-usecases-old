@@ -130,7 +130,7 @@ services:
         network_mode: "host"
         command: "motion --cid=${CID} --cidSM=219 --id=1 --verbose=1"
 
-    brakes:
-        image: chalmersfsd/logic-action-brakes:pre-release-6a1431c
-        network_mode: "host"
-        command: "brakes --cid=${CID} --cidBraking=219 --id=1 --verbose=1"
+#    brakes:
+#        image: chalmersfsd/logic-action-brakes:pre-release-6a1431c
+#        network_mode: "host"
+#        command: "brakes --cid=${CID} --cidBraking=219 --id=1 --verbose=1"
