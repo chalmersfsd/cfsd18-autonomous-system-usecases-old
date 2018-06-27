@@ -107,7 +107,7 @@ services:
         command: "/usr/bin/cfsd18-cognition-detectconelane --cid=${CID} --verbose=0 --id=211 --detectConeId=118 \
         --gatheringTimeMs=50 --separationTimeMs=10 \
         --fakeSlamActivated=${FAKESLAM} --guessDistance=4 --maxConeAngle=1.570796325 \
-        --coneWidthSeparationThreshold=5 --coneLengthSeparationThreshold=5.5"
+        --coneWidthSeparationThreshold=5 --coneLengthSeparationThreshold=7.5"
         
     cfsd18-cognition-track:
         image: chalmersfsd/cfsd18-cognition-track:pre-release-3e0335d
