@@ -98,4 +98,9 @@ services:
        ipc: host
        working_dir: "/opt/recordings"
        command: "/opt/od4/bin/odrecorderh264 --cid=${CID}"
+       
+    cfsd18-sim-visualization:
+        image: chalmersfsd/cfsd18-sim-visualization:pre-release-778bfb6
+        network_mode: "host"
+        command: "--cid=${CID}"
 
