@@ -97,7 +97,7 @@ services:
           memlock:
             soft: 5600000 #1516032
             hard: 5600000
-        command: "cfsd18-perception-detectcone --cid=${CID} --name=camera0 --width=1344 --height=376 --bpp=24 --id=118 --threshold=0.85 --timeDiffMilliseconds=20 --separationTimeMs=10 --checkLidarMilliseconds=1000 --senderStamp=118 --attentionSenderStamp=116 --offline=0 --annotate=0 --stateMachineId=1401 --readyStateMachine=0"
+        command: "cfsd18-perception-detectcone --cid=${CID} --name=camera0 --width=1344 --height=376 --bpp=24 --id=118 --threshold=0.6 --timeDiffMilliseconds=20 --separationTimeMs=10 --checkLidarMilliseconds=1000 --senderStamp=118 --attentionSenderStamp=116 --offline=0 --annotate=0 --stateMachineId=1401 --readyStateMachine=0"
 
     cfsd18-sensation-attention:
         image: chalmersfsd/cfsd18-sensation-attention:pre-release-911d2ac
