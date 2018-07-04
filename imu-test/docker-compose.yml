@@ -22,14 +22,13 @@ services:
         network_mode: host
         volumes:
         - .:/opt/opendlv.data
-        command: "/opt/od4/bin/odsupercomponent --cid=${CID} --verbose=0 --conf$
+        command: "/opt/od4/bin/odsupercomponent --cid=${CID} --verbose=0 --configuration=/opt/opendlv.data/configuration"
 
     odrecorderh264:
        image: ${IMAGE}
        depends_on:
            - odsupercomponent
-           - proxy-camera
-           - proxy-velodyne16
+           - opendlv-proxy-ellipse2n
        volumes:
            - ./recordings:/opt/recordings
        privileged: true

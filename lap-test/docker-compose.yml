@@ -148,7 +148,7 @@ services:
     motion:
         image: chalmersfsd/logic-action-motion:pre-release-6432d58
         network_mode: "host"
-        command: "motion --cid=${CID} --cidSM=219 --constantSpeed=1 --speedRequest=2 --id=1 --verbose=1"
+        command: "motion --cid=${CID} --cidSM=219 --constantSpeed=1 --speedRequest=3 --id=1 --verbose=1"
 
 #    brakes:
 #        image: chalmersfsd/logic-action-brakes:pre-release-6a1431c

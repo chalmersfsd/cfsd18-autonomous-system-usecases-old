@@ -70,12 +70,12 @@ services:
     #proxy-ellipse2n
     #image need to be built locally
     #image imu:latest is using libcluon v0.0.101
-    opendlv-proxy-ellipse2n:
-        image: proxy-imu:v0.0.101
-        network_mode: "host"
-        devices:
-            - "/dev/ttyUSB0:/dev/ttyUSB0"
-        command: "opendlv-proxy-ellipse2n --cid=${CID} --id=112"
+#    opendlv-proxy-ellipse2n:
+#        image: proxy-imu:v0.0.101
+#        network_mode: "host"
+#        devices:
+#            - "/dev/ttyUSB0:/dev/ttyUSB0"
+#        command: "opendlv-proxy-ellipse2n --cid=${CID} --id=112"
     
     cfsd18-perception-detectcone:
         image: chalmersfsd/cfsd18-perception-detectcone:pre-release-f688ef5
@@ -125,7 +125,7 @@ services:
         --coneWidthSeparationThreshold=5 --coneLengthSeparationThreshold=7.5"
         
     cfsd18-cognition-track:
-        image: chalmersfsd/cfsd18-cognition-track:pre-release-422b974
+        image: chalmersfsd/cfsd18-cognition-track:pre-release-3e0335d
         network_mode: "host"
         command: "/usr/bin/cfsd18-cognition-track --cid=${CID} --verbose=0 --id=221 --surfaceId=211 --speedId=112 \
         --gatheringTimeMs=50 --separationTimeMs=10 \
