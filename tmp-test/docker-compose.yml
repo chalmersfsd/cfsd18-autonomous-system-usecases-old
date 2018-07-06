@@ -20,7 +20,7 @@ services:
          memlock:
            soft: 5600000 #1516032
            hard: 5600000 
-       command: "opendlv-device-camera-opencv --name=camera0 --bgr2rgb --cid=${CID} --camera=/dev/video0 --width=2560 --height=720 --bpp=24 --freq=30"
+       command: "opendlv-device-camera-opencv --name=cam0 --bgr2rgb --cid=${CID} --camera=/dev/video0 --width=2560 --height=720 --bpp=24 --freq=30"
 
     cfsd18-perception-detectcone:
         image: "chalmersfsd/cfsd18-perception-detectcone:pre-release-c579d86"
