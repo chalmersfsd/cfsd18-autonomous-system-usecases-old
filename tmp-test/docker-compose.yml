@@ -23,15 +23,15 @@ services:
        command: "opendlv-device-camera-opencv --name=cam0 --bgr2rgb --cid=${CID} --camera=/dev/video0 --width=2560 --height=720 --bpp=24 --freq=30"
 
     cfsd18-perception-detectcone:
-        image: "chalmersfsd/cfsd18-perception-detectcone:pre-release-c579d86"
+        image: "chalmersfsd/cfsd18-perception-detectcone:pre-release-9ecd659"
         network_mode: "host"
         ipc: host
-        working_dir: /opt/tmp
+        working_dir: /opt
         environment:
           - DISPLAY=$DISPLAY
         volumes:
          - /tmp/.X11-unix:/tmp/.X11-unix
-         - .:/opt/tmp
+         - .:/opt
          - "/dev/shm:/dev/shm"
         depends_on:
           - proxy-camera
