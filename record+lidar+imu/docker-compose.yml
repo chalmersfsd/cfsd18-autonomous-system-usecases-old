@@ -1,12 +1,12 @@
 version: '2'
 
 services:
-    odsupercomponent:
-        image: ${IMAGE}
-        network_mode: host
-        volumes:
-        - .:/opt/opendlv.data
-        command: "/opt/od4/bin/odsupercomponent --cid=${CID} --verbose=1 --configuration=/opt/opendlv.data/configuration"
+#    odsupercomponent:
+#        image: ${IMAGE}
+#        network_mode: host
+#        volumes:
+#        - .:/opt/opendlv.data
+#        command: "/opt/od4/bin/odsupercomponent --cid=${CID} --verbose=1 --configuration=/opt/opendlv.data/configuration"
    
     cfsd18-sensation-attention:
         image: "chalmersfsd/cfsd18-sensation-attention:pre-release-911d2ac"
@@ -18,13 +18,13 @@ services:
         image: ${IMAGE}
         network_mode: host
         volumes:
-        - ~/Recordings:/opt/Recordings
+        - ./recordings:/opt/Recordings
         working_dir: "/opt/Recordings"
         privileged: true
         ipc: host
-        user: odv
+        user: root
         depends_on:
-            - odsupercomponent
+#            - odsupercomponent
             - proxy-velodyne16
             - proxy-ellipse2n
         command: "/opt/od4/bin/odrecorderh264 --cid=${CID}"
